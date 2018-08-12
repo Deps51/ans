@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="{% static 'accounts/css/bootstrap.min.css' %}" type = "text/css"/>
+  <link rel="icon" type="image/png" href={% static 'accounts/images/AnswerMeThis.png' %}/>
+  <title>Answer Me This</title>
+
+  <style type="text/css">
+    .profile{
+      margin-top: 60px;
+      padding: 20px;
+      margin-bottom: 10px;
+      margin-right: 60px;
+    }
+
+
+    .box{
+      margin-right: 300px;
+      display: inline;
+    }
+
+    .question, #id_question{
+      border: black 2px solid;
+      border-radius: 5px;
+      padding: 10px;
+      background: linear-gradient(to right, #ffdb26dd, #ffff00dd);
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    #id_option1, #id_option2{
+      border: black 2px solid;
+      border-radius: 5px;
+      padding: 10px;
+      background: linear-gradient(to right, #99ee13dd, #00ff00dd);
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .majority{
+      border: black 2px solid;
+      border-radius: 5px;
+      padding: 10px;
+      background: linear-gradient(to right, #99ee13dd, #00ff00dd);
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .minority{
+      border: black 2px solid;
+      border-radius: 5px;
+      padding:10px;
+      background: linear-gradient(to right, #ee2727dd, #ff0000dd);
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .percentage{
+      position: absolute;
+      bottom: -10px;
+      right: 16px;
+      font-size: 16px;
+    }
+
+    .ask{
+      position: absolute;
+      top: 25px;
+      right: 50px;
+      font-size: 18px;
+    }
+
+    .site-form{
+      margin-top: 60px;
+      border: 2px solid #00dba0;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    .site-form input{
+      display: block;
+      margin: 20px 0 0 0;
+      padding: 10px;
+    }
+
+    .helptext, .helptext ul{
+      margin: 0 auto 20px;
+      color: #bbb;
+      font-size: 0.9em;
+      display: block;
+    }
+
+    .errorlist li{
+      padding: 7px;
+      list-style-type: none;
+      border:1px solid #ff5722;
+      margin 10px 1px;
+    }
+
+    .errorlist{
+      padding: 0px;
+    }
+
+    {% block styles %}
+    {% endblock %}
+
+  </style>
+
+</head>
+<body>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

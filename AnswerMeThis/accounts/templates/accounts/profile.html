@@ -1,0 +1,55 @@
+{% extends "accounts/base.html" %}
+
+
+{% block content %}
+
+
+
+  <div class="profile">
+    <center>
+      <h1>Profile</h1>
+      <h3>Your Questions:</h3>
+      <h6>Click <a href='../logout'>here</a> to log out</h6>
+    </center>
+
+    <a href='../ask'><button class='btn btn-primary ask'>ask</button></a>
+
+    {% for question in questions %}
+      <div class="box">
+        <p class='question'><b>Question:</b> {{question.0}}</p>
+
+        <div class="{{question.2}}">
+          <p><b>Option 1:</b> {{question.1}}</p>
+          <p class='percentage'><b> <i> {{question.3}}% </i> </b></p>
+        </div>
+
+        <div class="{{question.5}}">
+          <p><b>Option 2:</b> {{question.4}}</p>
+          <p class='percentage'><b> <i> {{question.6}}% </i> </b></p>
+        </div>
+
+        <h6>Number of votes: {{question.7}}</h6>
+        <h6>Question Link: {{question.8}} (Share this link with your friends so they can vote!)</h6>
+      </div>
+      <br>
+      {% endfor %}
+
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+<center style="padding: 50px;">
+  <h1>Ask a question</h1>
+  <form method='post' style="padding:30px;">
+    {% csrf_token %}
+    {{form.as_p}}
+    {{profile_form.as_p}}
+    <button type="submit" class='btn btn-primary'>Ask Question</button>
+  </form
+</center>
+{% endblock %}

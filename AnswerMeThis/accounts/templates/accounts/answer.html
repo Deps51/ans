@@ -1,0 +1,31 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<center>
+  <div class="box">
+    <p class='question'><b>Question:</b> {{question.0}}</p>
+
+    <br>
+    
+    <form action="{{question.3}}/one" method="post" >
+      {% csrf_token %}
+      <div name ='action' value='submit-form1' onClick="javascript: this.parentNode.submit();" class="majority">
+        <p><b>Option 1:</b> {{question.1}}</p>
+      </div>
+    </form>
+
+    <br>
+
+    <form action="{{question.3}}/two" method="post">
+      {% csrf_token %}
+      <div name='action' value='submit-form2' onClick="javascript: this.parentNode.submit();" class="majority">
+        <p><b>Option 2:</b> {{question.2}}</p>
+      </div>
+    </form>
+  </div>
+</center>
+
+{% endblock %}

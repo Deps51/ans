@@ -1,0 +1,27 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<center>
+  <div class="box">
+    <p class='question'><b>Question:</b> {{question.0}}</p>
+
+    <br>
+
+    <div class="{{question.2}}">
+      <p><b>Option 1:</b> {{question.1}}</p>
+      <p class='percentage'><b> <i> {{question.3}}% </i> </b></p>
+    </div>
+
+    <br>
+
+    <div class="{{question.5}}">
+      <p><b>Option 2:</b> {{question.4}}</p>
+      <p class='percentage'><b> <i> {{question.6}}% </i> </b></p>
+    </div>
+  </div>
+</center>
+
+{% endblock %}
